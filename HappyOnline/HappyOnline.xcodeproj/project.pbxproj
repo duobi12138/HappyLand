@@ -1,0 +1,685 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0FC2ADEA8C853176291220F8 /* libPods-HappyOnline.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5457166B6054587F477104E5 /* libPods-HappyOnline.a */; };
+		B9FF81DB2D81B5C10016D4F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FF81DA2D81B5C10016D4F7 /* AppDelegate.m */; };
+		B9FF81DE2D81B5C10016D4F7 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FF81DD2D81B5C10016D4F7 /* SceneDelegate.m */; };
+		B9FF81E12D81B5C10016D4F7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FF81E02D81B5C10016D4F7 /* ViewController.m */; };
+		B9FF81E42D81B5C10016D4F7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B9FF81E32D81B5C10016D4F7 /* Base */; };
+		B9FF81E62D81B5C20016D4F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9FF81E52D81B5C20016D4F7 /* Assets.xcassets */; };
+		B9FF81E92D81B5C20016D4F7 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B9FF81E82D81B5C20016D4F7 /* Base */; };
+		B9FF81EC2D81B5C20016D4F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FF81EB2D81B5C20016D4F7 /* main.m */; };
+		B9FF81F62D81B5C20016D4F7 /* HappyOnlineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FF81F52D81B5C20016D4F7 /* HappyOnlineTests.m */; };
+		B9FF82002D81B5C30016D4F7 /* HappyOnlineUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FF81FF2D81B5C30016D4F7 /* HappyOnlineUITests.m */; };
+		B9FF82022D81B5C30016D4F7 /* HappyOnlineUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FF82012D81B5C30016D4F7 /* HappyOnlineUITestsLaunchTests.m */; };
+		B9FF82102D81B6320016D4F7 /* VideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FF820F2D81B6320016D4F7 /* VideoCell.m */; };
+		B9FF82132D81B65F0016D4F7 /* ProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FF82122D81B65F0016D4F7 /* ProfileView.m */; };
+		B9FF82192D81B6BA0016D4F7 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FF82182D81B6BA0016D4F7 /* ProfileViewController.m */; };
+		B9FF821C2D81B6C20016D4F7 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FF821B2D81B6C20016D4F7 /* HomeViewController.m */; };
+		B9FF821F2D81B6D40016D4F7 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9FF821E2D81B6D40016D4F7 /* MessageViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B9FF81F22D81B5C20016D4F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9FF81CE2D81B5C00016D4F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9FF81D52D81B5C10016D4F7;
+			remoteInfo = HappyOnline;
+		};
+		B9FF81FC2D81B5C30016D4F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B9FF81CE2D81B5C00016D4F7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9FF81D52D81B5C10016D4F7;
+			remoteInfo = HappyOnline;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5457166B6054587F477104E5 /* libPods-HappyOnline.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HappyOnline.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F64405061C27B69DE00F6C4 /* Pods-HappyOnline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyOnline.debug.xcconfig"; path = "Target Support Files/Pods-HappyOnline/Pods-HappyOnline.debug.xcconfig"; sourceTree = "<group>"; };
+		B9FF81D62D81B5C10016D4F7 /* HappyOnline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyOnline.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9FF81D92D81B5C10016D4F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B9FF81DA2D81B5C10016D4F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B9FF81DC2D81B5C10016D4F7 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		B9FF81DD2D81B5C10016D4F7 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		B9FF81DF2D81B5C10016D4F7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B9FF81E02D81B5C10016D4F7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B9FF81E32D81B5C10016D4F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B9FF81E52D81B5C20016D4F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B9FF81E82D81B5C20016D4F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B9FF81EA2D81B5C20016D4F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9FF81EB2D81B5C20016D4F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B9FF81F12D81B5C20016D4F7 /* HappyOnlineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyOnlineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9FF81F52D81B5C20016D4F7 /* HappyOnlineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HappyOnlineTests.m; sourceTree = "<group>"; };
+		B9FF81FB2D81B5C30016D4F7 /* HappyOnlineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyOnlineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9FF81FF2D81B5C30016D4F7 /* HappyOnlineUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HappyOnlineUITests.m; sourceTree = "<group>"; };
+		B9FF82012D81B5C30016D4F7 /* HappyOnlineUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HappyOnlineUITestsLaunchTests.m; sourceTree = "<group>"; };
+		B9FF820E2D81B6320016D4F7 /* VideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoCell.h; sourceTree = "<group>"; };
+		B9FF820F2D81B6320016D4F7 /* VideoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoCell.m; sourceTree = "<group>"; };
+		B9FF82112D81B65F0016D4F7 /* ProfileView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileView.h; sourceTree = "<group>"; };
+		B9FF82122D81B65F0016D4F7 /* ProfileView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileView.m; sourceTree = "<group>"; };
+		B9FF82172D81B6BA0016D4F7 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		B9FF82182D81B6BA0016D4F7 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		B9FF821A2D81B6C20016D4F7 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		B9FF821B2D81B6C20016D4F7 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		B9FF821D2D81B6D40016D4F7 /* MessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		B9FF821E2D81B6D40016D4F7 /* MessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		E6AE2FDC42D5A651C69B13BB /* Pods-HappyOnline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HappyOnline.release.xcconfig"; path = "Target Support Files/Pods-HappyOnline/Pods-HappyOnline.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B9FF81D32D81B5C10016D4F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FC2ADEA8C853176291220F8 /* libPods-HappyOnline.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9FF81EE2D81B5C20016D4F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9FF81F82D81B5C30016D4F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		69AD91AB2F3D79DC954DB037 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5457166B6054587F477104E5 /* libPods-HappyOnline.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6C084EBC78C53D4B135F66FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F64405061C27B69DE00F6C4 /* Pods-HappyOnline.debug.xcconfig */,
+				E6AE2FDC42D5A651C69B13BB /* Pods-HappyOnline.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B9FF81CD2D81B5C00016D4F7 = {
+			isa = PBXGroup;
+			children = (
+				B9FF81D82D81B5C10016D4F7 /* HappyOnline */,
+				B9FF81F42D81B5C20016D4F7 /* HappyOnlineTests */,
+				B9FF81FE2D81B5C30016D4F7 /* HappyOnlineUITests */,
+				B9FF81D72D81B5C10016D4F7 /* Products */,
+				6C084EBC78C53D4B135F66FF /* Pods */,
+				69AD91AB2F3D79DC954DB037 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B9FF81D72D81B5C10016D4F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B9FF81D62D81B5C10016D4F7 /* HappyOnline.app */,
+				B9FF81F12D81B5C20016D4F7 /* HappyOnlineTests.xctest */,
+				B9FF81FB2D81B5C30016D4F7 /* HappyOnlineUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B9FF81D82D81B5C10016D4F7 /* HappyOnline */ = {
+			isa = PBXGroup;
+			children = (
+				B9FF81D92D81B5C10016D4F7 /* AppDelegate.h */,
+				B9FF81DA2D81B5C10016D4F7 /* AppDelegate.m */,
+				B9FF81DC2D81B5C10016D4F7 /* SceneDelegate.h */,
+				B9FF81DD2D81B5C10016D4F7 /* SceneDelegate.m */,
+				B9FF81DF2D81B5C10016D4F7 /* ViewController.h */,
+				B9FF81E02D81B5C10016D4F7 /* ViewController.m */,
+				B9FF820E2D81B6320016D4F7 /* VideoCell.h */,
+				B9FF820F2D81B6320016D4F7 /* VideoCell.m */,
+				B9FF82112D81B65F0016D4F7 /* ProfileView.h */,
+				B9FF82122D81B65F0016D4F7 /* ProfileView.m */,
+				B9FF82172D81B6BA0016D4F7 /* ProfileViewController.h */,
+				B9FF82182D81B6BA0016D4F7 /* ProfileViewController.m */,
+				B9FF821A2D81B6C20016D4F7 /* HomeViewController.h */,
+				B9FF821B2D81B6C20016D4F7 /* HomeViewController.m */,
+				B9FF821D2D81B6D40016D4F7 /* MessageViewController.h */,
+				B9FF821E2D81B6D40016D4F7 /* MessageViewController.m */,
+				B9FF81E22D81B5C10016D4F7 /* Main.storyboard */,
+				B9FF81E52D81B5C20016D4F7 /* Assets.xcassets */,
+				B9FF81E72D81B5C20016D4F7 /* LaunchScreen.storyboard */,
+				B9FF81EA2D81B5C20016D4F7 /* Info.plist */,
+				B9FF81EB2D81B5C20016D4F7 /* main.m */,
+			);
+			path = HappyOnline;
+			sourceTree = "<group>";
+		};
+		B9FF81F42D81B5C20016D4F7 /* HappyOnlineTests */ = {
+			isa = PBXGroup;
+			children = (
+				B9FF81F52D81B5C20016D4F7 /* HappyOnlineTests.m */,
+			);
+			path = HappyOnlineTests;
+			sourceTree = "<group>";
+		};
+		B9FF81FE2D81B5C30016D4F7 /* HappyOnlineUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B9FF81FF2D81B5C30016D4F7 /* HappyOnlineUITests.m */,
+				B9FF82012D81B5C30016D4F7 /* HappyOnlineUITestsLaunchTests.m */,
+			);
+			path = HappyOnlineUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B9FF81D52D81B5C10016D4F7 /* HappyOnline */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9FF82052D81B5C30016D4F7 /* Build configuration list for PBXNativeTarget "HappyOnline" */;
+			buildPhases = (
+				2C3F19E3A938DE268563841A /* [CP] Check Pods Manifest.lock */,
+				B9FF81D22D81B5C10016D4F7 /* Sources */,
+				B9FF81D32D81B5C10016D4F7 /* Frameworks */,
+				B9FF81D42D81B5C10016D4F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HappyOnline;
+			productName = HappyOnline;
+			productReference = B9FF81D62D81B5C10016D4F7 /* HappyOnline.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B9FF81F02D81B5C20016D4F7 /* HappyOnlineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9FF82082D81B5C30016D4F7 /* Build configuration list for PBXNativeTarget "HappyOnlineTests" */;
+			buildPhases = (
+				B9FF81ED2D81B5C20016D4F7 /* Sources */,
+				B9FF81EE2D81B5C20016D4F7 /* Frameworks */,
+				B9FF81EF2D81B5C20016D4F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9FF81F32D81B5C20016D4F7 /* PBXTargetDependency */,
+			);
+			name = HappyOnlineTests;
+			productName = HappyOnlineTests;
+			productReference = B9FF81F12D81B5C20016D4F7 /* HappyOnlineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B9FF81FA2D81B5C30016D4F7 /* HappyOnlineUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B9FF820B2D81B5C30016D4F7 /* Build configuration list for PBXNativeTarget "HappyOnlineUITests" */;
+			buildPhases = (
+				B9FF81F72D81B5C30016D4F7 /* Sources */,
+				B9FF81F82D81B5C30016D4F7 /* Frameworks */,
+				B9FF81F92D81B5C30016D4F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B9FF81FD2D81B5C30016D4F7 /* PBXTargetDependency */,
+			);
+			name = HappyOnlineUITests;
+			productName = HappyOnlineUITests;
+			productReference = B9FF81FB2D81B5C30016D4F7 /* HappyOnlineUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B9FF81CE2D81B5C00016D4F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					B9FF81D52D81B5C10016D4F7 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					B9FF81F02D81B5C20016D4F7 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = B9FF81D52D81B5C10016D4F7;
+					};
+					B9FF81FA2D81B5C30016D4F7 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = B9FF81D52D81B5C10016D4F7;
+					};
+				};
+			};
+			buildConfigurationList = B9FF81D12D81B5C00016D4F7 /* Build configuration list for PBXProject "HappyOnline" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B9FF81CD2D81B5C00016D4F7;
+			productRefGroup = B9FF81D72D81B5C10016D4F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B9FF81D52D81B5C10016D4F7 /* HappyOnline */,
+				B9FF81F02D81B5C20016D4F7 /* HappyOnlineTests */,
+				B9FF81FA2D81B5C30016D4F7 /* HappyOnlineUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B9FF81D42D81B5C10016D4F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9FF81E62D81B5C20016D4F7 /* Assets.xcassets in Resources */,
+				B9FF81E92D81B5C20016D4F7 /* Base in Resources */,
+				B9FF81E42D81B5C10016D4F7 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9FF81EF2D81B5C20016D4F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9FF81F92D81B5C30016D4F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C3F19E3A938DE268563841A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HappyOnline-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B9FF81D22D81B5C10016D4F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9FF81E12D81B5C10016D4F7 /* ViewController.m in Sources */,
+				B9FF82102D81B6320016D4F7 /* VideoCell.m in Sources */,
+				B9FF81DB2D81B5C10016D4F7 /* AppDelegate.m in Sources */,
+				B9FF81EC2D81B5C20016D4F7 /* main.m in Sources */,
+				B9FF82192D81B6BA0016D4F7 /* ProfileViewController.m in Sources */,
+				B9FF82132D81B65F0016D4F7 /* ProfileView.m in Sources */,
+				B9FF821F2D81B6D40016D4F7 /* MessageViewController.m in Sources */,
+				B9FF81DE2D81B5C10016D4F7 /* SceneDelegate.m in Sources */,
+				B9FF821C2D81B6C20016D4F7 /* HomeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9FF81ED2D81B5C20016D4F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9FF81F62D81B5C20016D4F7 /* HappyOnlineTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9FF81F72D81B5C30016D4F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9FF82022D81B5C30016D4F7 /* HappyOnlineUITestsLaunchTests.m in Sources */,
+				B9FF82002D81B5C30016D4F7 /* HappyOnlineUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B9FF81F32D81B5C20016D4F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9FF81D52D81B5C10016D4F7 /* HappyOnline */;
+			targetProxy = B9FF81F22D81B5C20016D4F7 /* PBXContainerItemProxy */;
+		};
+		B9FF81FD2D81B5C30016D4F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B9FF81D52D81B5C10016D4F7 /* HappyOnline */;
+			targetProxy = B9FF81FC2D81B5C30016D4F7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B9FF81E22D81B5C10016D4F7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9FF81E32D81B5C10016D4F7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B9FF81E72D81B5C20016D4F7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B9FF81E82D81B5C20016D4F7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B9FF82032D81B5C30016D4F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B9FF82042D81B5C30016D4F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B9FF82062D81B5C30016D4F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F64405061C27B69DE00F6C4 /* Pods-HappyOnline.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HappyOnline/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhizuobiao.HappyOnline;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B9FF82072D81B5C30016D4F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6AE2FDC42D5A651C69B13BB /* Pods-HappyOnline.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HappyOnline/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhizuobiao.HappyOnline;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B9FF82092D81B5C30016D4F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhizuobiao.HappyOnlineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HappyOnline.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HappyOnline";
+			};
+			name = Debug;
+		};
+		B9FF820A2D81B5C30016D4F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhizuobiao.HappyOnlineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HappyOnline.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/HappyOnline";
+			};
+			name = Release;
+		};
+		B9FF820C2D81B5C30016D4F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhizuobiao.HappyOnlineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HappyOnline;
+			};
+			name = Debug;
+		};
+		B9FF820D2D81B5C30016D4F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhizuobiao.HappyOnlineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HappyOnline;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B9FF81D12D81B5C00016D4F7 /* Build configuration list for PBXProject "HappyOnline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9FF82032D81B5C30016D4F7 /* Debug */,
+				B9FF82042D81B5C30016D4F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9FF82052D81B5C30016D4F7 /* Build configuration list for PBXNativeTarget "HappyOnline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9FF82062D81B5C30016D4F7 /* Debug */,
+				B9FF82072D81B5C30016D4F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9FF82082D81B5C30016D4F7 /* Build configuration list for PBXNativeTarget "HappyOnlineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9FF82092D81B5C30016D4F7 /* Debug */,
+				B9FF820A2D81B5C30016D4F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B9FF820B2D81B5C30016D4F7 /* Build configuration list for PBXNativeTarget "HappyOnlineUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9FF820C2D81B5C30016D4F7 /* Debug */,
+				B9FF820D2D81B5C30016D4F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B9FF81CE2D81B5C00016D4F7 /* Project object */;
+}
