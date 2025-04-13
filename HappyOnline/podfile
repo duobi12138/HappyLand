@@ -1,5 +1,7 @@
 platform:ios, '13.0'
 
+inhibit_all_warnings!
+
 target 'HappyOnline' do
   
   pod 'AFNetworking', '~> 4.0'
@@ -8,6 +10,12 @@ target 'HappyOnline' do
  
   pod 'YYModel'
 
-  pod 'SDWebImage', '~>3.8.1'
+  pod 'SDWebImage', '~>4.4.8'
+
+  pod 'JSONModel'
+
+  pod 'MJRefresh', '~>3.7.9'
+
+  pod 'LookinServer', :configurations => ['Debug']
 
 end

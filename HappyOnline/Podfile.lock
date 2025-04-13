@@ -14,31 +14,45 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
+  - JSONModel (1.8.0)
+  - LookinServer (1.2.8):
+    - LookinServer/Core (= 1.2.8)
+  - LookinServer/Core (1.2.8)
   - Masonry (1.1.0)
-  - SDWebImage (3.8.3):
-    - SDWebImage/Core (= 3.8.3)
-  - SDWebImage/Core (3.8.3)
+  - MJRefresh (3.7.9)
+  - SDWebImage (4.4.8):
+    - SDWebImage/Core (= 4.4.8)
+  - SDWebImage/Core (4.4.8)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 4.0)
+  - JSONModel
+  - LookinServer
   - Masonry
-  - SDWebImage (~> 3.8.1)
+  - MJRefresh (~> 3.7.9)
+  - SDWebImage (~> 4.4.8)
   - YYModel
 
 SPEC REPOS:
   trunk:
     - AFNetworking
+    - JSONModel
+    - LookinServer
     - Masonry
+    - MJRefresh
     - SDWebImage
     - YYModel
 
 SPEC CHECKSUMS:
   AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
+  JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
+  LookinServer: 1b2b61c6402ae29fa22182d48f5cd067b4e99e80
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  SDWebImage: a72e880a8fe0f7fc31efe15aaed443c074d2a80c
+  MJRefresh: ff9e531227924c84ce459338414550a05d2aea78
+  SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 681f12bd57b30efae74b6a40a4eadb5d154b0eee
+PODFILE CHECKSUM: cf3e5c373dfe8628b66328dea65f52d1f12ee29e
 
 COCOAPODS: 1.16.2

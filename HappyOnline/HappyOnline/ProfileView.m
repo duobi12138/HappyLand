@@ -19,6 +19,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+        
         [self setupUI];
         [self fetchProfileData];
         [self fetchVideosData];
@@ -26,33 +27,89 @@
     return self;
 }
 
+// 将十六进制颜色码转换为UIColor对象的方法
++ (UIColor *)colorWithHexString:(NSString *)hexString {
+    NSString *colorString = [[hexString stringByReplacingOccurrencesOfString:@"#" withString:@""] uppercaseString];
+    CGFloat alpha, red, blue, green;
+    switch ([colorString length]) {
+        case 3: // #RGB
+            alpha = 1.0f;
+            red = [self colorComponentFrom:colorString start:0 length:1];
+            green = [self colorComponentFrom:colorString start:1 length:1];
+            blue = [self colorComponentFrom:colorString start:2 length:1];
+            break;
+        case 4: // #ARGB
+            alpha = [self colorComponentFrom:colorString start:0 length:1];
+            red = [self colorComponentFrom:colorString start:1 length:1];
+            green = [self colorComponentFrom:colorString start:2 length:1];
+            blue = [self colorComponentFrom:colorString start:3 length:1];
+            break;
+        case 6: // #RRGGBB
+            alpha = 1.0f;
+            red = [self colorComponentFrom:colorString start:0 length:2];
+            green = [self colorComponentFrom:colorString start:2 length:2];
+            blue = [self colorComponentFrom:colorString start:4 length:2];
+            break;
+        case 8: // #AARRGGBB
+            alpha = [self colorComponentFrom:colorString start:0 length:2];
+            red = [self colorComponentFrom:colorString start:2 length:2];
+            green = [self colorComponentFrom:colorString start:4 length:2];
+            blue = [self colorComponentFrom:colorString start:6 length:2];
+            break;
+        default:
+            return [UIColor whiteColor];
+    }
+    return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
+}
+
++ (CGFloat)colorComponentFrom:(NSString *)string start:(NSUInteger)start length:(NSUInteger)length {
+    NSString *substring = [string substringWithRange:NSMakeRange(start, length)];
+    NSString *fullHex = length == 2 ? substring : [NSString stringWithFormat:@"%@%@", substring, substring];
+    unsigned hexComponent;
+    [[NSScanner scannerWithString:fullHex] scanHexInt:&hexComponent];
+    return hexComponent / 255.0;
+}
+
 #pragma mark - 个人页面UI布局
 
 - (void)setupUI {
-    self.backgroundColor = [UIColor whiteColor];
+//    self.backgroundColor = [UIColor whiteColor];
     
-    self.avatarImage = [[UIImageView alloc] init];
-    self.avatarImage.image = [UIImage imageNamed:@"placeholder_avatar"];
-    self.avatarImage.layer.cornerRadius = 40;
-    self.avatarImage.layer.masksToBounds = YES;
-    [self addSubview:self.avatarImage];
+    UIImage *avatarImage = [UIImage imageNamed:@"touxiang.jpg"];
+        
+    // 创建UIImageView并设置其大小，这里设置为100x100
+    UIImageView *avatarImageView = [[UIImageView alloc] initWithFrame:CGRectMake(50, 50, 100, 100)];
+    avatarImageView.image = avatarImage;
+    
+    // 设置内容模式，保证图片按比例填充
+    avatarImageView.contentMode = UIViewContentModeScaleAspectFill;
+    // 裁剪超出边界的部分
+    avatarImageView.clipsToBounds = YES;
+    
+    self.avatarImageView = [[UIImageView alloc] init];
+    self.avatarImageView.image = [UIImage imageNamed:@"touxiang.jpg"];
+    self.avatarImageView.layer.cornerRadius = 40;
+    self.avatarImageView.layer.masksToBounds = YES;
+    [self addSubview:self.avatarImageView];
     
     self.nameLabel = [[UILabel alloc] init];
-    self.nameLabel.text = @"placeholder_name";
-    self.nameLabel.font = [UIFont systemFontOfSize:14];
+    self.nameLabel.text = @"诉枯夏";
+    self.nameLabel.font = [UIFont systemFontOfSize:25];
     self.nameLabel.textAlignment = NSTextAlignmentCenter;//设置文本居中对齐
     [self addSubview:self.nameLabel];
     
     self.fansLabel = [[UILabel alloc] init];
-    self.fansLabel.text = @"粉丝：placedolder_fans";
-    self.fansLabel.font = [UIFont systemFontOfSize:14];
+    self.fansLabel.text = @"粉丝：13w";
+    self.fansLabel.font = [UIFont systemFontOfSize:17];
+    self.fansLabel.textColor = [ProfileView colorWithHexString:@"#101010"];
     self.fansLabel.textAlignment = NSTextAlignmentCenter;
     [self addSubview:self.fansLabel];
     
     self.followsLabel = [[UILabel alloc] init];
-    self.followsLabel.text = @"关注：placedolder_follows";
-    self.followsLabel.font = [UIFont systemFontOfSize:14];
+    self.followsLabel.text = @"关注：327";
+    self.followsLabel.font = [UIFont systemFontOfSize:17];
     self.followsLabel.textAlignment = NSTextAlignmentCenter;
+    self.followsLabel.textColor = [UIColor blackColor];
     [self addSubview:self.followsLabel];
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
@@ -61,20 +118,24 @@
     layout.minimumInteritemSpacing = 0; // 列间距
     self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
     self.collectionView.backgroundColor = [UIColor whiteColor];
+    //注册cell
     [self.collectionView registerClass:[VideoCell class] forCellWithReuseIdentifier:@"VideoCell"];
+    
+    [self.collectionView registerClass:[SegmentView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"SegmentView"];
+    
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
     [self addSubview:self.collectionView];
     
     // 使用 Masonry 布局
-    [self.avatarImage mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.mas_top).offset(20);
+    [self.avatarImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.mas_top).offset(60);
         make.centerX.equalTo(self);
         make.width.height.mas_equalTo(80);
     }];
     
     [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.avatarImage.mas_bottom).offset(50);
+        make.top.equalTo(self.avatarImageView.mas_bottom).offset(30);
         make.centerX.equalTo(self);
     }];
     
@@ -124,7 +185,7 @@
 #pragma mark - UICollectionViewDataSource
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 10;
+    return 12;
 //    return self.videos.count;
 }
 
@@ -149,15 +210,79 @@
 //    [cell configureWithImageURL:imageURL title:title];
 }
 
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
+        SegmentView *header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"SegmentView" forIndexPath:indexPath];
+        return header;
+    }
+    return nil;
+}
+
 #pragma mark - UICollectionViewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    // 随机高度，模拟瀑布流
+//     随机高度，模拟瀑布流
 //    CGFloat height = arc4random_uniform(100) + 100;
-    CGFloat height = 300;
-    CGFloat width = (self.frame.size.width - 2) / 2;
+    CGFloat spacing = 2;//间距
+    CGFloat height = 200;
+    CGFloat width = (self.frame.size.width - spacing) / 3;
     return CGSizeMake(width, height);
 }
 
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
+    return CGSizeMake(self.frame.size.width, 50); // 分栏高度
+}
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat offsetY = scrollView.contentOffset.y;
+    CGFloat segmentViewHeight = 50; // 分栏高度
+    CGFloat pinnedOffsetY = CGRectGetMaxY(self.followsLabel.frame) + 20; // 分栏固定时的偏移量
+    
+    if (offsetY >= pinnedOffsetY) {
+        if (!self.isSegmentViewPinned) {
+            self.isSegmentViewPinned = YES;
+            [self pinSegmentViewToTop];
+        }
+    } else {
+        if (self.isSegmentViewPinned) {
+            self.isSegmentViewPinned = NO;
+            [self unpinSegmentView];
+        }
+    }
+}
+
+- (void)pinSegmentViewToTop {
+    // 将分栏固定在顶部
+    [self.segmentView removeFromSuperview];
+    [self addSubview:self.segmentView];
+    [self.segmentView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.followsLabel.mas_bottom).offset(20);
+        make.left.right.equalTo(self);
+        make.height.mas_equalTo(50);
+    }];
+}
+
+- (void)unpinSegmentView {
+    // 将分栏恢复到原来的位置
+    [self.segmentView removeFromSuperview];
+    [self.collectionView addSubview:self.segmentView];
+    [self.segmentView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.collectionView).offset(CGRectGetMaxY(self.followsLabel.frame) + 20);
+        make.left.right.equalTo(self.collectionView);
+        make.height.mas_equalTo(50);
+    }];
+}
+
+//- (void)setupRefreshControl {
+//    // 创建 UIRefreshControl
+//    self.refreshControl = [[UIRefreshControl alloc] init];
+//    self.refreshControl.tintColor = [UIColor grayColor]; // 设置菊花颜色
+//    [self.refreshControl addTarget:self action:@selector(handleRefresh:) forControlEvents:UIControlEventValueChanged];
+//    
+//    // 将 UIRefreshControl 添加到 UICollectionView
+//    self.collectionView.refreshControl = self.refreshControl;
+//}
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

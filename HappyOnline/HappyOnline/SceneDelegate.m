@@ -6,9 +6,12 @@
 //
 
 #import "SceneDelegate.h"
-#import "HomeViewController.h"
-#import "MessageViewController.h"
-#import "ProfileViewController.h"
+#import "LoginViewController.h"
+#import "UserManager.h"
+#import "MainViewController.h"
+//#import "HomeViewController.h"
+//#import "MessageViewController.h"
+//#import "ProfileViewController.h"
 
 @interface SceneDelegate ()
 
@@ -21,53 +24,8 @@
     self.window.frame = [UIScreen mainScreen].bounds;
     self.window.backgroundColor = [UIColor whiteColor];
     
-    //创建TabBarController
-    UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    tabBarController.tabBar.backgroundColor = [UIColor clearColor];
-    tabBarController.tabBar.tintColor = [UIColor blackColor];
-    
-    //创建三个视图控制器
-    HomeViewController *homeVC = [[HomeViewController alloc] init];
-    homeVC.view.backgroundColor = [UIColor whiteColor];
-    
-    MessageViewController *messageVC = [[MessageViewController alloc] init];
-    messageVC.view.backgroundColor = [UIColor whiteColor];
-    
-    ProfileViewController *profileVC = [[ProfileViewController alloc] init];
-    profileVC.view.backgroundColor = [UIColor whiteColor];
-    
-    //设置TabBar的标题和图标
-    homeVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"首页" image:nil tag:101];
-    messageVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"消息" image:nil tag:102];
-    profileVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我的" image:nil tag:103];
-    
-    //将视图控制器添加到TabBarController
-    NSArray *arrayVC = [NSArray arrayWithObjects:homeVC, messageVC, profileVC, nil];
-    tabBarController.viewControllers = arrayVC;
-    
-    UITabBarAppearance *appearance = [[UITabBarAppearance alloc] init];
-    [appearance configureWithDefaultBackground];
-    
-    // 设置分栏标题字体大小和颜色
-    // 设置未选中状态的样式
-    [appearance.stackedLayoutAppearance.normal setTitleTextAttributes:@{
-        NSFontAttributeName: [UIFont systemFontOfSize:16], // 字体大小
-        NSForegroundColorAttributeName: [UIColor lightGrayColor] // 字体颜色
-    }];
-
-    // 设置选中状态的样式
-    [appearance.stackedLayoutAppearance.selected setTitleTextAttributes:@{
-        NSFontAttributeName: [UIFont boldSystemFontOfSize:18], // 字体大小
-        NSForegroundColorAttributeName: [UIColor blackColor] // 字体颜色
-    }];
-    
-    // 应用样式
-    tabBarController.tabBar.standardAppearance = appearance;
-    tabBarController.tabBar.scrollEdgeAppearance = appearance;
-    
-    //设置根视图
-    self.window.rootViewController = tabBarController;
-    tabBarController.selectedIndex = 0;
+    // 检查登录状态
+    [self checkLoginStatus];
     
     //显示窗口
     [self.window makeKeyAndVisible];
@@ -78,6 +36,81 @@
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 }
 
+- (void)checkLoginStatus {
+    NSString *lastAccount = [[NSUserDefaults standardUserDefaults] objectForKey:@"lastLoginAccount"];
+    User *lastUser = [[UserManager shared] getUserByAccount:lastAccount];
+    
+    if (lastUser) {
+        // 已登录用户直接进入主界面
+        
+        MainViewController *mainViewController = [[MainViewController alloc] init];
+    self.window.rootViewController = mainViewController;
+    
+//        //创建TabBarController
+//        UITabBarController *tabBarController = [[UITabBarController alloc] init];
+//        tabBarController.tabBar.backgroundColor = [UIColor clearColor];
+//        tabBarController.tabBar.tintColor = [UIColor blackColor];
+//        
+//        //创建三个视图控制器
+//        HomeViewController *homeVC = [[HomeViewController alloc] init];
+//        homeVC.view.backgroundColor = [UIColor whiteColor];
+//        
+//        MessageViewController *messageVC = [[MessageViewController alloc] init];
+//        messageVC.view.backgroundColor = [UIColor whiteColor];
+//        
+//        ProfileViewController *profileVC = [[ProfileViewController alloc] init];
+//        profileVC.view.backgroundColor = [UIColor whiteColor];
+//        
+//        //设置TabBar的标题和图标
+//        homeVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"首页" image:nil tag:101];
+//        messageVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"消息" image:nil tag:102];
+//        profileVC.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我的" image:nil tag:103];
+//        
+//        //将视图控制器添加到TabBarController
+//        NSArray *arrayVC = [NSArray arrayWithObjects:homeVC, messageVC, profileVC, nil];
+//        tabBarController.viewControllers = arrayVC;
+//        
+//        UITabBarAppearance *appearance = [[UITabBarAppearance alloc] init];
+//        [appearance configureWithDefaultBackground];
+//        
+//        // 设置分栏标题字体大小和颜色
+//        // 设置未选中状态的样式
+//        [appearance.stackedLayoutAppearance.normal setTitleTextAttributes:@{
+//            NSFontAttributeName: [UIFont systemFontOfSize:16], // 字体大小
+//            NSForegroundColorAttributeName: [UIColor lightGrayColor] // 字体颜色
+//        }];
+//
+//        // 设置选中状态的样式
+//        [appearance.stackedLayoutAppearance.selected setTitleTextAttributes:@{
+//            NSFontAttributeName: [UIFont boldSystemFontOfSize:18], // 字体大小
+//            NSForegroundColorAttributeName: [UIColor blackColor] // 字体颜色
+//        }];
+//        
+//        // 应用样式
+//        tabBarController.tabBar.standardAppearance = appearance;
+//        tabBarController.tabBar.scrollEdgeAppearance = appearance;
+        
+        //设置根视图
+//        self.window.rootViewController = tabBarController;
+//        tabBarController.selectedIndex = 0;
+        
+//        MainViewController *mainVC = [[MainViewController alloc] init];
+//        mainVC.currentUser = lastUser; // 传递用户对象
+//        self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:mainVC];
+        
+    } else {
+        // 未登录显示登录界面
+        LoginViewController *loginVC = [[LoginViewController alloc] init];
+        self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:loginVC];
+    }
+}
+
+//// 支持状态恢复
+//- (void)stateRestorationActivityForScene:(UIScene *)scene {
+//    NSUserActivity *activity = [[NSUserActivity alloc] initWithActivityType:@"com.yourapp.main"];
+//    activity.userInfo = @{ @"lastAccount": [[NSUserDefaults standardUserDefaults] objectForKey:@"lastLoginAccount"] ?: @"" };
+//    return activity;
+//}
 
 - (void)sceneDidDisconnect:(UIScene *)scene {
     // Called as the scene is being released by the system.
